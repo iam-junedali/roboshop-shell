@@ -1,12 +1,12 @@
-yum install nginx -y
+yum install nginx -y >/tmp/roboshop.log
 
-rm -rf /usr/share/nginx/html/*
+rm -rf /usr/share/nginx/html/* >/tmp/roboshop.log
 
-curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip >>/tmp/roboshop.log
+curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip >>/tmp/roboshop.log >/tmp/roboshop.log
 
 cd /usr/share/nginx/html
-unzip /tmp/frontend.zip
+unzip /tmp/frontend.zip >/tmp/roboshop.log
 
-systemctl enable nginx
+systemctl enable nginx >/tmp/roboshop.log
 
-systemctl restart nginx
+systemctl restart nginx >/tmp/roboshop.log
