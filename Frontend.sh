@@ -1,4 +1,4 @@
-yum install nginx -y
+dnf install nginx -y
 
 rm -rf /usr/share/nginx/html/*
 
